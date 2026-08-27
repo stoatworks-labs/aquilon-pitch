@@ -1,0 +1,18 @@
+# Cloudflare deployment for Aquilon Pitch.
+#
+# A static-assets-only Worker: no server code. The fleet does NOT use Cloudflare
+# Pages — `pages_build_output_dir` fails with "Could not detect a directory
+# containing static files", which reads like a missing build step and is really
+# the wrong config key. Same shape as aspect-calc, blend-calc and pixel-peeker.
+#
+# Build command in the Cloudflare project:
+#
+#   npm ci && npm run build
+#
+# `name` must match the Cloudflare project.
+
+name = "aquilon-pitch"
+compatibility_date = "2026-07-30"
+
+[assets]
+directory = "./dist"

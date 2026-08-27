@@ -2,7 +2,7 @@
  * The public face of the engine — the barrel the vendored build is made from.
  *
  * `npm run build:lib` bundles everything reachable from here into one readable
- * ESM file in `lib-dist/`, which is what the other LivePremier tools in the
+ * ESM file in `dist-lib/`, which is what the other LivePremier tools in the
  * fleet copy in. Adding an export here widens that contract; removing one
  * breaks a consumer. Treat this file as the API.
  *

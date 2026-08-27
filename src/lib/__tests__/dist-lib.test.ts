@@ -1,5 +1,5 @@
 /**
- * `lib-dist/` is generated but COMMITTED, because other repos vendor it and a
+ * `dist-lib/` is generated but COMMITTED, because other repos vendor it and a
  * fresh clone must be able to hand them a file without a build step first.
  *
  * Committed build output goes stale silently — someone edits `pitch.ts`, the
@@ -24,7 +24,7 @@ import { fileURLToPath } from 'node:url'
 import * as source from '../index.ts'
 import type { Project } from '../../types.ts'
 
-const BUILT = fileURLToPath(new URL('../../../lib-dist/aquilon-pitch-engine.js', import.meta.url))
+const BUILT = fileURLToPath(new URL('../../../dist-lib/aquilon-pitch-engine.js', import.meta.url))
 
 const CASES: Project[] = [
   {
@@ -57,7 +57,7 @@ const CASES: Project[] = [
   },
 ]
 
-describe('the committed lib-dist bundle', () => {
+describe('the committed dist-lib bundle', () => {
   it('exists — other repos vendor this file', () => {
     expect(existsSync(BUILT), `${BUILT} is missing — run: npm run build:lib`).toBe(true)
   })

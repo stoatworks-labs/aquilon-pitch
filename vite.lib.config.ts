@@ -1,7 +1,7 @@
 /**
  * The build that produces the copy other tools vendor.
  *
- *     npm run build:lib   ->   lib-dist/aquilon-pitch-engine.js
+ *     npm run build:lib   ->   dist-lib/aquilon-pitch-engine.js
  *
  * One readable ESM file, no minification, comments kept. That is deliberate on
  * every count: the vendored copy is read by whoever is debugging the tool that
@@ -21,7 +21,7 @@ const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 
 
 export default defineConfig({
   build: {
-    outDir: 'lib-dist',
+    outDir: 'dist-lib',
     emptyOutDir: true,
     minify: false,
     // No sourcemap: it would point at paths inside THIS repo, which do not

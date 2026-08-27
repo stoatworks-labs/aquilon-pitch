@@ -140,7 +140,7 @@ written to be vendored into the other LivePremier tools in the fleet, the way
 `awj-surface`'s core is vendored into `livepremier-plus`.
 
 ```bash
-npm run build:lib      # -> lib-dist/aquilon-pitch-engine.js
+npm run build:lib      # -> dist-lib/aquilon-pitch-engine.js
 ```
 
 One readable ESM file, unminified, comments intact — a minified blob in someone else's
@@ -148,8 +148,8 @@ One readable ESM file, unminified, comments intact — a minified blob in someon
 something if a reviewer can diff actual code. `src/lib/index.ts` is the barrel that
 defines the public surface; adding an export there widens the contract.
 
-`lib-dist/` is generated but **committed**, so a fresh clone can hand a consumer the file
-without building first. `lib-dist.test.ts` loads the built bundle beside the source and
+`dist-lib/` is generated but **committed**, so a fresh clone can hand a consumer the file
+without building first. `dist-lib.test.ts` loads the built bundle beside the source and
 demands the same answers, so a stale copy fails the suite rather than quietly disagreeing
 with every tool that borrowed it.
 

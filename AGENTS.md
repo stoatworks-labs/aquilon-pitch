@@ -72,12 +72,12 @@ whole results column into `NaN`.
 
 No React, no DOM, no dependencies, no imports outside `src/lib` and `src/types.ts`.
 `npm run build:lib` bundles it from `src/lib/index.ts` into one readable ESM file at
-`lib-dist/aquilon-pitch-engine.js`, which `livepremier-plus` and `negative-space` copy in
+`dist-lib/aquilon-pitch-engine.js`, which `livepremier-plus` and `negative-space` copy in
 under their own vendoring conventions — the way `awj-surface`'s core is vendored into
 `livepremier-plus`.
 
-`lib-dist/` is generated but **committed**. Touch `src/lib/` and you rebuild and commit it
-in the same change; `lib-dist.test.ts` fails when the bundle and the source disagree on any
+`dist-lib/` is generated but **committed**. Touch `src/lib/` and you rebuild and commit it
+in the same change; `dist-lib.test.ts` fails when the bundle and the source disagree on any
 of its cases. Widen those cases rather than relaxing them when something slips through.
 
 ## 5. Verifying against the simulator

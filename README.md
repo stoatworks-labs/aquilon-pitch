@@ -135,14 +135,27 @@ static assets (`npm run deploy`).
 
 ## The engine is meant to be borrowed
 
-`src/lib/pitch.ts`, `src/lib/device.ts` and `src/lib/awj.ts` have no React, no DOM and no
-imports outside themselves. They are written to be vendored wholesale into the other
-LivePremier tools in the fleet, the way `awj-surface`'s core is vendored into
-`livepremier-plus`. Keep them that way.
+`src/lib/` has no React, no DOM, no dependencies and no imports outside itself. It is
+written to be vendored into the other LivePremier tools in the fleet, the way
+`awj-surface`'s core is vendored into `livepremier-plus`.
+
+```bash
+npm run build:lib      # -> lib-dist/aquilon-pitch-engine.js
+```
+
+One readable ESM file, unminified, comments intact — a minified blob in someone else's
+`src/vendor/` is a dead end, and the hash manifests in the consuming repos only mean
+something if a reviewer can diff actual code. `src/lib/index.ts` is the barrel that
+defines the public surface; adding an export there widens the contract.
+
+`lib-dist/` is generated but **committed**, so a fresh clone can hand a consumer the file
+without building first. `lib-dist.test.ts` loads the built bundle beside the source and
+demands the same answers, so a stale copy fails the suite rather than quietly disagreeing
+with every tool that borrowed it.
 
 ## Status
 
-**Alpha.** The device arithmetic is measured and pinned by 44 tests. The UI has been driven
+**Alpha.** The device arithmetic is measured and pinned by 51 tests. The UI has been driven
 end to end in a browser. What has *not* happened: nothing has run against physical Aquilon
 hardware, and no screen configured from these numbers has been played out onto real LED walls
 and looked at. The simulator is the same web application and object model as the switcher, and

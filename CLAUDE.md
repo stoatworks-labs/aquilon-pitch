@@ -6,9 +6,10 @@ every device fact is in `docs/NOTES.md`.
 ```bash
 npm install
 npm run dev          # vite, port 4362 in the fleet launch config
-npm test             # vitest, 44 tests
+npm test             # vitest, 51 tests
 npm run typecheck    # tsc -b
 npm run build        # -> dist/, static
+npm run build:lib    # -> lib-dist/, the single ESM file other repos vendor
 npm run deploy       # cloudflare worker with static assets
 ```
 
@@ -21,3 +22,6 @@ npm run deploy       # cloudflare worker with static assets
 - **Never clamp an out-of-range ratio.** The device discards those writes; a clamped value is
   a number we invented.
 - **No network calls.** The AWJ frames are printed, never sent.
+- **`lib-dist/` is committed and must not go stale.** Change anything under `src/lib/`
+  and you re-run `npm run build:lib` and commit the result in the same change.
+  `lib-dist.test.ts` fails when the built bundle and the source disagree.

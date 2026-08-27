@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "LivePremier pitch compensation calculator — mixed-pitch LED walls on one Aquilon screen, reduced to the H and V ratios Web RCS will actually hold.",
+  "description": "LivePremier pitch compensation calculator \u2014 mixed-pitch LED walls on one Aquilon screen, reduced to the H and V ratios Web RCS will actually hold.",
   "license": "MIT",
   "scripts": {
     "dev": "vite",
@@ -12,7 +12,8 @@
     "deploy": "npm run build && npx wrangler deploy",
     "test": "vitest run",
     "test:watch": "vitest",
-    "typecheck": "tsc -b"
+    "typecheck": "tsc -b",
+    "build:lib": "vite build --config vite.lib.config.ts"
   },
   "dependencies": {
     "react": "^18.3.1",

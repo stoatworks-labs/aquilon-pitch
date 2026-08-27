@@ -23,7 +23,8 @@ src/
   lib/device.ts             what a LivePremier does. Every constant is MEASURED — read it
   lib/pitch.ts              THE ENGINE. ratio = pitch_group / pitch_reference, twice
   lib/awj.ts                instructions, CSV, and the AWJ frames (printed, never sent)
-  lib/urlstate.ts           localStorage + shareable hash
+  lib/index.ts              the barrel = the PUBLIC API other repos vendor
+  lib/urlstate.ts           localStorage + shareable hash (NOT exported)
   components/CanvasViz.tsx  the room above, the canvas below, same scale
   components/ui.tsx         Field / Panel / Segmented / Stat / CopyButton
   App.tsx                   wiring and all the state
@@ -69,9 +70,15 @@ whole results column into `NaN`.
 
 ### `src/lib/` is vendorable — keep it that way
 
-No React, no DOM, no imports outside `src/lib` and `src/types.ts`. It is meant to be lifted
-into `livepremier-plus`, `negative-space` or `pixel-peeker` wholesale, the way `awj-surface`'s
-core is vendored into `livepremier-plus`.
+No React, no DOM, no dependencies, no imports outside `src/lib` and `src/types.ts`.
+`npm run build:lib` bundles it from `src/lib/index.ts` into one readable ESM file at
+`lib-dist/aquilon-pitch-engine.js`, which `livepremier-plus` and `negative-space` copy in
+under their own vendoring conventions — the way `awj-surface`'s core is vendored into
+`livepremier-plus`.
+
+`lib-dist/` is generated but **committed**. Touch `src/lib/` and you rebuild and commit it
+in the same change; `lib-dist.test.ts` fails when the bundle and the source disagree on any
+of its cases. Widen those cases rather than relaxing them when something slips through.
 
 ## 5. Verifying against the simulator
 

@@ -22,7 +22,7 @@ import { existsSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 
 import * as source from '../index.ts'
-import type { Project } from '../../types.ts'
+import type { Project } from '../types.ts'
 
 const BUILT = fileURLToPath(new URL('../../../dist-lib/aquilon-pitch-engine.js', import.meta.url))
 

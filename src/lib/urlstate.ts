@@ -9,7 +9,7 @@
  * a wall layout is a client's set design and it has nowhere to leak to.
  */
 
-import type { Project } from '../types.ts'
+import type { Project } from './types.ts'
 
 const KEY = 'aquilon-pitch:project'
 

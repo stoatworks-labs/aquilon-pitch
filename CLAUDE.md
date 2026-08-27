@@ -15,8 +15,10 @@ npm run deploy       # cloudflare worker with static assets
 
 ## Rules that are not negotiable
 
-- **`src/lib/` imports nothing outside itself.** No React, no DOM. It is written to be
-  vendored into the other LivePremier tools.
+- **`src/lib/` imports nothing outside itself.** No React, no DOM, and no path that
+  leaves the directory — the domain types live in `lib/types.ts` for exactly that
+  reason. livepremier-plus vendors the built bundle; negative-space copies the
+  directory as TypeScript, and an outward import breaks it.
 - **`footprint()` floors.** It was measured. Four tests exist purely to break if someone
   changes it to `round`.
 - **Never clamp an out-of-range ratio.** The device discards those writes; a clamped value is

@@ -3,7 +3,7 @@ import { describe, it, expect } from 'vitest'
 import { compensate, pickReference, resolvePitch, SQUARE_PIXEL_TOLERANCE } from '../pitch.ts'
 import { footprint, PITCH_MIN, PITCH_MAX, PITCH_SCALE } from '../device.ts'
 import { awjFrames, csv, instructions, walkthrough } from '../awj.ts'
-import type { OutputGroup, Project } from '../../types.ts'
+import type { OutputGroup, Project } from '../types.ts'
 
 // ---------------------------------------------------------------------------
 // helpers

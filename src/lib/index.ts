@@ -27,6 +27,6 @@ export { instructions, walkthrough, awjFrames, csv } from './awj.ts'
 export type {
   Arrangement, AxisResult, GroupResult, OutputGroup, PitchEntry, Project,
   ResolvedPitch, Result, Warning, WarningCode, WarningLevel,
-} from '../types.ts'
+} from './types.ts'
 
 export type { AwjFrame, Instruction } from './awj.ts'

@@ -19,7 +19,7 @@ cost.
 
 ```
 src/
-  types.ts                  the domain. All lengths are MILLIMETRES
+  lib/types.ts              the domain. All lengths are MILLIMETRES
   lib/device.ts             what a LivePremier does. Every constant is MEASURED — read it
   lib/pitch.ts              THE ENGINE. ratio = pitch_group / pitch_reference, twice
   lib/awj.ts                instructions, CSV, and the AWJ frames (printed, never sent)
@@ -70,11 +70,20 @@ whole results column into `NaN`.
 
 ### `src/lib/` is vendorable — keep it that way
 
-No React, no DOM, no dependencies, no imports outside `src/lib` and `src/types.ts`.
-`npm run build:lib` bundles it from `src/lib/index.ts` into one readable ESM file at
-`dist-lib/aquilon-pitch-engine.js`, which `livepremier-plus` and `negative-space` copy in
-under their own vendoring conventions — the way `awj-surface`'s core is vendored into
-`livepremier-plus`.
+No React, no DOM, no dependencies, and — since the domain types moved into
+`lib/types.ts` — no imports leaving the directory at all. That closure is the point:
+a TypeScript consumer can copy `src/lib/` wholesale and it compiles.
+It is vendored two ways, because the consumers are two languages:
+
+- **`livepremier-plus`** is plain JavaScript, so it takes the bundle.
+  `npm run build:lib` emits one readable ESM file at
+  `dist-lib/aquilon-pitch-engine.js` — the same arrangement mynah has with its
+  `dist-lang/`.
+- **`negative-space`** is TypeScript, so it copies `src/lib/` itself and keeps the
+  types.
+
+Both are hash-checked against this repo by a test in the consumer. Do not add an
+import that leaves `src/lib/`, or the second one stops compiling.
 
 `dist-lib/` is generated but **committed**. Touch `src/lib/` and you rebuild and commit it
 in the same change; `dist-lib.test.ts` fails when the bundle and the source disagree on any

@@ -148,6 +148,10 @@ One readable ESM file, unminified, comments intact — a minified blob in someon
 something if a reviewer can diff actual code. `src/lib/index.ts` is the barrel that
 defines the public surface; adding an export there widens the contract.
 
+A TypeScript consumer copies `src/lib/` itself instead and keeps the types — which works
+because the directory is closed, domain types included. Nothing in it imports a path that
+leaves it.
+
 `dist-lib/` is generated but **committed**, so a fresh clone can hand a consumer the file
 without building first. `dist-lib.test.ts` loads the built bundle beside the source and
 demands the same answers, so a stale copy fails the suite rather than quietly disagreeing

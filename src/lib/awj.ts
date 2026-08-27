@@ -9,7 +9,7 @@
  */
 
 import { awjPath, awjCommitPath, PITCH_UNITY, UI_LOCATION } from './device.ts'
-import type { GroupResult, Result } from '../types.ts'
+import type { GroupResult, Result } from './types.ts'
 
 /** One line of "go here, type this". */
 export type Instruction = {

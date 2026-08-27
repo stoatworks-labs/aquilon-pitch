@@ -1,5 +1,12 @@
 /**
- * Domain types.
+ * Domain types for the engine.
+ *
+ * These live INSIDE src/lib/ rather than beside the app, so the directory is
+ * closed: a TypeScript consumer can copy src/lib/ wholesale and it compiles,
+ * with no import reaching out to a file that was left behind. negative-space
+ * vendors it exactly that way; livepremier-plus, which is plain JavaScript,
+ * takes the bundled build instead. Same engine, two shapes, one hash check
+ * each.
  *
  * ALL LENGTHS ARE MILLIMETRES. Pixel pitch is quoted in mm by every LED
  * manufacturer and on every spec sheet, and pitch is the hinge this whole tool

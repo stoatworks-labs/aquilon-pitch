@@ -6,7 +6,7 @@ import { UI_LOCATION } from './lib/device.ts'
 import { load, save, shareLink } from './lib/urlstate.ts'
 import { CanvasViz } from './components/CanvasViz.tsx'
 import { CopyButton, Field, Panel, Segmented, Stat } from './components/ui.tsx'
-import type { OutputGroup, Project, Warning } from './types.ts'
+import type { OutputGroup, Project, Warning } from './lib/types.ts'
 
 export default function App() {
   const [project, setProject] = useState<Project>(load)

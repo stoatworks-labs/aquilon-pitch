@@ -22,7 +22,7 @@ import {
 } from './device.ts'
 import type {
   AxisResult, GroupResult, OutputGroup, Project, ResolvedPitch, Result, Warning,
-} from '../types.ts'
+} from './types.ts'
 
 /**
  * Below this, a group's H and V pitch are the same number wearing two hats.

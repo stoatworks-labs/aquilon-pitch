@@ -14,7 +14,7 @@
  * wrong they visibly disagree, which is the whole diagnostic.
  */
 
-import type { Result } from '../types.ts'
+import type { Result } from '../lib/types.ts'
 
 const W = 720
 const ROW_H = 96

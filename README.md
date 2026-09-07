@@ -165,6 +165,36 @@ hardware, and no screen configured from these numbers has been played out onto r
 and looked at. The simulator is the same web application and object model as the switcher, and
 it is still not the switcher.
 
+<!-- selfhost:start -->
+## Run your own copy
+
+Aquilon Pitch is a static page, so hosting it yourself is one container serving
+the built files — the same files the hosted copy serves, running somewhere that
+still works when the venue has no internet.
+
+**Docker.** The image is built by this repo's `docker.yml` workflow on every
+push and published as `ghcr.io/stoatworks-labs/aquilon-pitch`:
+
+```bash
+docker run -d --name aquilon-pitch --restart unless-stopped -p 8540:80 ghcr.io/stoatworks-labs/aquilon-pitch:latest
+```
+
+Or `docker compose up -d` with the [`docker-compose.yml`](docker-compose.yml)
+in this repo, which maps the same port. Either way it is then at
+`http://localhost:8540/`.
+
+**Unraid.** Search Community Applications for *Aquilon Pitch* — the template is
+[`templates/aquilon-pitch.xml`](https://github.com/stoatworks-labs/stoatworks-unraid/blob/main/templates/aquilon-pitch.xml)
+in [stoatworks-unraid](https://github.com/stoatworks-labs/stoatworks-unraid), which is what the CA feed reads.
+
+**Stoatworks Burrow** lists it under *Self-hosted*, with the compose file a
+click away.
+
+The `Dockerfile`, `docker-compose.yml`, `docker/` and the workflow are
+generated from `fleet.json` in stoatworks-unraid. Change them there and
+regenerate rather than editing them here.
+<!-- selfhost:end -->
+
 ## Licence
 
 MIT.

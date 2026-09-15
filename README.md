@@ -22,9 +22,9 @@ field costs you at the far edge of each wall.
 Runs entirely in the browser. No account, no backend, nothing uploaded — a client's set design
 has nowhere to leak to.
 
-![Aquilon Pitch with its starting example: a main wall and a side wall resolved into one screen canvas](docs/screenshots/aquilon-pitch.png)
+![Aquilon Pitch with a 2.6 mm main wall and a 4.0 mm side wall: the ratios to type, the screen drawn as the room and as the canvas, and the quantisation notes](docs/screenshots/aquilon-pitch.png)
 
-<sub>The hosted tool as it opens: a 3840 px main wall and a 1920 px side wall of the same physical width — a coarser pitch, so a 2.000 ratio — resolved into one 7680 × 2160 screen canvas at the finest pitch. The ratios to type into the switcher are in the table, and the screen is drawn twice below it, as the room and as the canvas, at the same scale.</sub>
+<sub>A 2.6 mm main wall and a 4.0 mm side wall on one screen: the side wall wants a ratio of 1.53846…, the field holds 1.538, and across its 1920-pixel raster that is 1.85 canvas pixels short — 4.8 mm of real wall at the far edge, which the notes under the drawing say out loud. The hosted tool, with the side wall's pitch typed in over the example it opens with.</sub>
 
 ---
 

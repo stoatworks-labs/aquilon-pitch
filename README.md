@@ -22,6 +22,10 @@ field costs you at the far edge of each wall.
 Runs entirely in the browser. No account, no backend, nothing uploaded — a client's set design
 has nowhere to leak to.
 
+![Aquilon Pitch with its starting example: a main wall and a side wall resolved into one screen canvas](docs/screenshots/aquilon-pitch.png)
+
+<sub>The hosted tool as it opens: a 3840 px main wall and a 1920 px side wall of the same physical width — a coarser pitch, so a 2.000 ratio — resolved into one 7680 × 2160 screen canvas at the finest pitch. The ratios to type into the switcher are in the table, and the screen is drawn twice below it, as the room and as the canvas, at the same scale.</sub>
+
 ---
 
 ## The problem it exists for

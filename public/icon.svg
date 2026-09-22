@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Aquilon Pitch">
+  <rect width="32" height="32" rx="6" fill="#0a1420"/>
+  <g id="mark">
+    <!-- One screen, two pitches: coarse panels beside fine ones. -->
+    <g fill="#4cc9f0">
+      <rect x="4.4" y="9" width="4.8" height="4.8" rx=".7"/>
+      <rect x="9.8" y="9" width="4.8" height="4.8" rx=".7"/>
+      <rect x="4.4" y="14.4" width="4.8" height="4.8" rx=".7"/>
+      <rect x="9.8" y="14.4" width="4.8" height="4.8" rx=".7"/>
+      <rect x="4.4" y="19.8" width="4.8" height="4.8" rx=".7"/>
+      <rect x="9.8" y="19.8" width="4.8" height="4.8" rx=".7"/>
+    </g>
+    <g fill="#4cc9f0" opacity=".62">
+      <rect x="17" y="9" width="2.4" height="2.4" rx=".4"/><rect x="20" y="9" width="2.4" height="2.4" rx=".4"/><rect x="23" y="9" width="2.4" height="2.4" rx=".4"/><rect x="26" y="9" width="2.4" height="2.4" rx=".4"/>
+      <rect x="17" y="12" width="2.4" height="2.4" rx=".4"/><rect x="20" y="12" width="2.4" height="2.4" rx=".4"/><rect x="23" y="12" width="2.4" height="2.4" rx=".4"/><rect x="26" y="12" width="2.4" height="2.4" rx=".4"/>
+      <rect x="17" y="15" width="2.4" height="2.4" rx=".4"/><rect x="20" y="15" width="2.4" height="2.4" rx=".4"/><rect x="23" y="15" width="2.4" height="2.4" rx=".4"/><rect x="26" y="15" width="2.4" height="2.4" rx=".4"/>
+      <rect x="17" y="18" width="2.4" height="2.4" rx=".4"/><rect x="20" y="18" width="2.4" height="2.4" rx=".4"/><rect x="23" y="18" width="2.4" height="2.4" rx=".4"/><rect x="26" y="18" width="2.4" height="2.4" rx=".4"/>
+      <rect x="17" y="21" width="2.4" height="2.4" rx=".4"/><rect x="20" y="21" width="2.4" height="2.4" rx=".4"/><rect x="23" y="21" width="2.4" height="2.4" rx=".4"/><rect x="26" y="21" width="2.4" height="2.4" rx=".4"/>
+      <rect x="17" y="24" width="2.4" height="2.4" rx=".4"/><rect x="20" y="24" width="2.4" height="2.4" rx=".4"/><rect x="23" y="24" width="2.4" height="2.4" rx=".4"/><rect x="26" y="24" width="2.4" height="2.4" rx=".4"/>
+    </g>
+  </g>
+</svg>

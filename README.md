@@ -22,6 +22,8 @@ you at the far edge of each wall.
 It runs entirely in the browser. There's no account and no backend, and nothing is uploaded, so a
 client's set design has nowhere to leak to.
 
+It's live at [aquilon-pitch.stoatworks-labs.com](https://aquilon-pitch.stoatworks-labs.com). There's more on [its page at stoatworks-labs.com](https://stoatworks-labs.com/web-tools/aquilon-pitch/), along with [notes on running it on your own server](https://stoatworks-labs.com/web-tools/self-hosting/).
+
 ![Aquilon Pitch with a 2.6 mm main wall and a 4.0 mm side wall: the ratios to type, the screen drawn as the room and as the canvas, and the quantisation notes](docs/screenshots/aquilon-pitch.png)
 
 <sub>A 2.6 mm main wall and a 4.0 mm side wall on one screen: the side wall wants a ratio of 1.53846…, the field holds 1.538, and across its 1920-pixel raster that's 1.85 canvas pixels short, or 4.8 mm of real wall at the far edge, which the notes under the drawing say out loud. This is the hosted tool, with the side wall's pitch typed in over the example it opens with.</sub>

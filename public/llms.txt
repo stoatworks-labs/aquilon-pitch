@@ -1,0 +1,15 @@
+# Aquilon Pitch
+
+> Mixed-pitch walls on one Aquilon screen
+
+Works out the pitch compensation an Analog Way LivePremier needs when one screen spans LED walls of different pixel pitches. Type in each output group's raster and its pitch (or its measured size, and let it work the pitch out), and you get the H and V ratios to type into Web RCS, the canvas footprint each group will take, the screen canvas that comes out of it, and how many millimetres the device's three-decimal field costs you at the far edge of each wall. It all runs in the browser with no account and no backend, so a client's set design has nowhere to leak to.
+
+It's a Stoatworks Labs web tool: free, and it runs in a web browser.
+
+## Links
+
+- [Aquilon Pitch, the app](https://aquilon-pitch.stoatworks-labs.com/): runs in the browser, free
+- [Project page](https://stoatworks-labs.com/software/aquilon-pitch/)
+- [Web tool page](https://stoatworks-labs.com/web-tools/aquilon-pitch/)
+- [Source on GitHub](https://github.com/stoatworks-labs/aquilon-pitch)
+- [Self-hosting](https://stoatworks-labs.com/web-tools/self-hosting/): run it on your own server

@@ -225,7 +225,9 @@ export default function App() {
       </main>
 
       <footer className="foot">
-        <span>{__APP_VERSION__}</span>
+        <span>
+          {__APP_VERSION__} · <a href="https://stoatworks-labs.com/web-tools/aquilon-pitch/" target="_blank" rel="noopener">stoatworks-labs.com</a>
+        </span>
         <span>
           Ratios verified against AW LivePremier Simulator 6.2.73. Never checked on real hardware.
         </span>

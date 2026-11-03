@@ -187,3 +187,6 @@ details summary { cursor: pointer; color: var(--text-dim); font-size: 13px; }
   fill: var(--accent); font-size: 9.5px; text-anchor: middle;
   text-transform: uppercase; letter-spacing: 0.8px;
 }
+
+/* The footer's link to the tool's page on stoatworks-labs.com: the footer's own colour, not browser blue. */
+.foot a { color: inherit; }

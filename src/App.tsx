@@ -49,11 +49,16 @@ export default function App() {
 
   return (
     <div className="app">
-      <header className="topbar">
-        <strong>Aquilon Pitch</strong>
+      <header className="topbar sw-bar">
+        <strong className="sw-brand"><span className="sw-mark" aria-hidden="true">◧</span> Aquilon Pitch</strong>
         <span className="tag">LivePremier pitch compensation</span>
         <span className="grow" />
         <CopyButton text={shareLink(project)} label="Copy link" />
+        {/* Opens the shared About dialog — see public/about.js, which delegates
+            this attribute from the document, so nothing needs importing here. */}
+        <button type="button" className="btn" data-stoatworks-about>
+          About
+        </button>
       </header>
 
       <main className="cols">

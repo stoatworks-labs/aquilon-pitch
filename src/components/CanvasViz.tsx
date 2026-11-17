@@ -21,7 +21,8 @@ const ROW_H = 96
 const GAP = 44
 const PAD = 8
 
-const COLOURS = ['#4cc9f0', '#f2b134', '#5ec98a', '#c77dff', '#ef5d5d', '#7bdff2']
+// One colour per group, set in styles.css with a light-mode and a dark-mode value.
+const COLOURS = ['var(--viz-1)', 'var(--viz-2)', 'var(--viz-3)', 'var(--viz-4)', 'var(--viz-5)', 'var(--viz-6)']
 
 export function CanvasViz({ result }: { result: Result }) {
   if (result.groups.length === 0 || result.canvas.width === 0) {
@@ -102,7 +103,7 @@ export function CanvasViz({ result }: { result: Result }) {
         ))}
         <line
           x1={W - PAD} y1={18 + ROW_H} x2={W - PAD} y2={18 + ROW_H + GAP}
-          stroke="#64798f" strokeWidth={1} strokeDasharray="3 3" opacity={0.5}
+          stroke="var(--text-faint)" strokeWidth={1} strokeDasharray="3 3" opacity={0.5}
         />
 
         <text x={PAD} y={18 + ROW_H + GAP - 8} className="viz-cap">
